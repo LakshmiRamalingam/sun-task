@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Student recovery recording</title>
+    <link rel="stylesheet" href="newstyle.css" />
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <header><h1>Student Recovery Recording</h1></header>
+    <main>
+      <div class="container1">
+        <p>form content goes here</p>
+      </div>
+      <div class="container">
+        <form name="myForm" form action="" method="get">
+          <div class="form-row">
+            <label for="name"> Instructor Name:</label>
+            <input type="text" id="name" />
+          </div>
+          <div class="form-row">
+            <label for="Exam"> Exam Code:</label>
+            <select name="Exam" id="Exam">
+              <option value="">--Please choose the correct Exam code--</option>
+              <option value="code1">AT017</option>
+              <option value="code2">CT154</option>
+              <option value="code3">AT317</option>
+              <option value="code4">BT141</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="reason"> Reason For Training:</label>
+            <select name="reason" id="reason">
+              <option value="">
+                --Please select the correct reason for training
+              </option>
+              <option value="train1">ATT</option>
+              <option value="train2">ITT</option>
+              <option value="train3">ETT</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="date">Date:</label>
+            <input type="date" id="date" />
+          </div>
+          <div class="form-row">
+            <label for="Studentname"> Student Name:</label>
+            <input type="text" id="Studentname" />
+          </div>
+          <div class="form-row">
+            <label for="Duration">Duration:</label>
+            <input type="time" id="Duration" min="1:00" />
+          </div>
+          <div class="form-row">
+            <textarea name="comment" rows="4" cols="50">
+Enter details of work carried out and KLP's covered here...</textarea
+            >
+          </div>
+          <input type="submit" value="Submit" onclick="myFunction()" />
+          <script>
+            function myFunction() {
+              var text;
+              if (document.getElementById("Duration").validity.rangeUnderflow) {
+                text = "Not enough Recovery Time";
+              } else {
+                text = "Recovery Time acceptable";
+              }
+              document.getElementById("myForm").innerHTML = text;
+            }
+          </script>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <p>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+          <img
+            style="border: 0; width: 88px; height: 31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!"
+          />
+        </a>
+      </p>
+    </footer>
+  </body>
+</html>
